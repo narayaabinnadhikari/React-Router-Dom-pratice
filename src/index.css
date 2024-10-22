@@ -29,9 +29,13 @@ a {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
-  color: #103;
 }
-
+/* the below active className is due to the Navlink component of react-router-dom */
+a.active {
+  color:red;
+  font-size:larger;
+  background-color:grey;
+}
 .navbar button {
   background: rgb(248, 115, 115);
   color: #fff;
@@ -54,4 +58,13 @@ a {
 .container h1{
   font-size: 40px;
   font-weight: 600;
+}
+
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  gap: 20px;
 }

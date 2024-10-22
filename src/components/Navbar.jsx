@@ -1,28 +1,29 @@
 
-
-import React from 'react'
 import logo from '../assets/Cocacola_logo.png'
-import { Link } from "react-router-dom";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
+
   return (
     <div className="navbar">
       <img src={logo} width={130} alt="Logo" />
       <ul>
-        <Link to="/">
+        <NavLink to="/">
           <li>Home</li>
-        </Link>
-        <Link to="/products">
+        </NavLink>
+        <NavLink to="/products">
           <li>Our Products</li>
-        </Link>
-        <Link to="contact">
+        </NavLink>
+        <NavLink to="contact">
           <li>Contact Us</li>
-        </Link>
-        <Link to="about">
+        </NavLink>
+        <NavLink to="about">
           <li> About Us</li>
-        </Link>
+        </NavLink>
       </ul>
-      <button>Get Started</button>
+      <button onClick={() => navigate('/contact', {replace:true})}>Get Started</button>
     </div>
   );
 };
